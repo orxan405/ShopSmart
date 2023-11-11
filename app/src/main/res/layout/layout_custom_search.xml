@@ -16,7 +16,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Axtarış..."
+        android:hint="@string/search_hint"
         android:layout_weight="2"
         android:layout_gravity="center_vertical"
         >

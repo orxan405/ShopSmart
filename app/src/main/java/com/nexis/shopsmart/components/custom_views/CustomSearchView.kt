@@ -7,10 +7,10 @@ import android.widget.LinearLayout
 import com.nexis.shopsmart.databinding.LayoutCustomSearchBinding
 
 class CustomSearchView @JvmOverloads constructor(
-    val context: Context,
+    val ctx: Context,
     val attsSet: AttributeSet? = null,
     val styleDef: Int = 0
-) : LinearLayout(context, attsSet, styleDef) {
+) : LinearLayout(ctx, attsSet, styleDef) {
     private val binding = LayoutCustomSearchBinding.inflate(LayoutInflater.from(context), this, true)
 
     init {
