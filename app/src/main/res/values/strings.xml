@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ShopSmart</string>
     <string name="search_hint">Axtarış...</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
 </resources>
