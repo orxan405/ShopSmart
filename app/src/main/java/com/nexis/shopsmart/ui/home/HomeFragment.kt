@@ -2,15 +2,25 @@ package com.nexis.shopsmart.ui.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.shopssmart.components.adapters.BannerAdapter
+import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.farzin.shopsmarttest.base.BaseFragment
+import com.nexis.shopsmart.R
 import com.nexis.shopsmart.components.adapters.ProductAdapter
 import com.nexis.shopsmart.databinding.FragmentHomeBinding
+import com.nexis.shopsmart.util.BundleNames.SELECTED_ITEM
 import com.nexis.shopsmart.util.Mock.getMockProducts
+import com.nexis.shopsmart.util.getMockCategories
 
-class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     lateinit var productAdapter: ProductAdapter
+    lateinit var categoryAdapter: CategoryAdapter
+    lateinit var bannerAdapter: BannerAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -20,11 +30,27 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infla
     }
 
     private fun initView() {
-        productAdapter = ProductAdapter()
+        productAdapter = ProductAdapter { productModel ->
+            findNavController().navigate(
+                R.id.action_homeFragment_to_productDetailsFragment,
+                bundleOf(SELECTED_ITEM to productModel)
+            )
+        }
+        categoryAdapter = CategoryAdapter { selectedCategory ->
+
+        }
+
+        binding.recyclerViewCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewProducts.layoutManager = GridLayoutManager(requireContext(), 2)
+
         val list = getMockProducts()
+        val categoryList = getMockCategories()
+
         binding.recyclerViewProducts.adapter = productAdapter
+        binding.recyclerViewCategory.adapter = categoryAdapter
+
         productAdapter.setData(list)
+        categoryAdapter.setData(categoryList)
     }
 
 }
