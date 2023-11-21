@@ -14,6 +14,7 @@ import com.nexis.shopsmart.components.adapters.ProductAdapter
 import com.nexis.shopsmart.databinding.FragmentHomeBinding
 import com.nexis.shopsmart.util.BundleNames.SELECTED_ITEM
 import com.nexis.shopsmart.util.Mock.getMockProducts
+import com.nexis.shopsmart.util.getMockBanners
 import com.nexis.shopsmart.util.getMockCategories
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
@@ -40,17 +41,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         }
 
+        bannerAdapter = BannerAdapter { selectedBannaer -> }
+
         binding.recyclerViewCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewProducts.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.recyclerViewBanner.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val list = getMockProducts()
         val categoryList = getMockCategories()
+        val bannerList = getMockBanners()
 
         binding.recyclerViewProducts.adapter = productAdapter
         binding.recyclerViewCategory.adapter = categoryAdapter
+        binding.recyclerViewBanner.adapter = bannerAdapter
 
         productAdapter.setData(list)
         categoryAdapter.setData(categoryList)
+        bannerAdapter.setData(bannerList)
     }
 
 }

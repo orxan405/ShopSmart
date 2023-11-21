@@ -1,6 +1,7 @@
 package com.nexis.shopsmart.util
 
 
+import com.example.shopssmart.model.local.BannerModel
 import com.example.shopssmart.model.local.CategoryModel
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.model.local.ProductModel
@@ -174,6 +175,16 @@ object Mock {
     }
 }
 
+fun getMockBanners(): ArrayList<BannerModel>{
+    return arrayListOf(
+        BannerModel(
+            bannerId = 1,
+            bannerIcon = R.drawable.ic_banner
+        )
+    )
+}
+
+
 fun getMockCategories(): ArrayList<CategoryModel>{
     return arrayListOf(
         CategoryModel(
@@ -184,7 +195,7 @@ fun getMockCategories(): ArrayList<CategoryModel>{
         CategoryModel(
             categoryId = 2,
             categoryName = "School",
-            categoryIcon = R.drawable.ic_category_sports
+            categoryIcon = R.drawable.ic_category_school
         ),
         CategoryModel(
             categoryId = 3,

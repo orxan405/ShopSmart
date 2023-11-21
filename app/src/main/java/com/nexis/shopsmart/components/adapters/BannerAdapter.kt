@@ -8,7 +8,7 @@ import com.farzin.shopsmarttest.base.BaseRecyclerAdapter
 import com.nexis.shopsmart.databinding.ItemBannerViewBinding
 
 
-class BannerAdapter : BaseRecyclerAdapter<BannerModel, ItemBannerViewBinding, BannerViewHolder>() {
+class BannerAdapter(val onClick: (BannerAdapter) -> Unit) : BaseRecyclerAdapter<BannerModel, ItemBannerViewBinding, BannerViewHolder>() {
     override fun createViewBinding(parent: ViewGroup, viewType: Int): ItemBannerViewBinding {
         return ItemBannerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     }
@@ -17,6 +17,6 @@ class BannerAdapter : BaseRecyclerAdapter<BannerModel, ItemBannerViewBinding, Ba
         binding: ItemBannerViewBinding,
         viewType: Int
     ): BannerViewHolder {
-        return BannerViewHolder(binding)
+        return BannerViewHolder(binding, onClick)
     }
 }
