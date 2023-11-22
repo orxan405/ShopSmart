@@ -3,7 +3,7 @@ package com.nexis.shopsmart.model.local
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
-//@Parcelize
+@Parcelize
 data class ProductModel(
     val id: Int,
     val productId: String,
@@ -13,4 +13,4 @@ data class ProductModel(
     val productDescription: String,
     val isFavorite: Boolean = false
 
-) //: Parcelable
+) : Parcelable

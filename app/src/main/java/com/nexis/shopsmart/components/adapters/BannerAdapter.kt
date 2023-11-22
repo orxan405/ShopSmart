@@ -13,10 +13,7 @@ class BannerAdapter(val onClick: (BannerAdapter) -> Unit) : BaseRecyclerAdapter<
         return ItemBannerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     }
 
-    override fun createViewHolder(
-        binding: ItemBannerViewBinding,
-        viewType: Int
-    ): BannerViewHolder {
+    override fun createViewHolder(binding: ItemBannerViewBinding, viewType: Int): BannerViewHolder {
         return BannerViewHolder(binding, onClick)
     }
 }

@@ -4,6 +4,7 @@ package com.nexis.shopsmart.util
 import com.example.shopssmart.model.local.BannerModel
 import com.example.shopssmart.model.local.CategoryModel
 import com.nexis.shopsmart.R
+import com.nexis.shopsmart.model.local.ColorsModel
 import com.nexis.shopsmart.model.local.ProductModel
 
 object Mock {
@@ -16,10 +17,37 @@ object Mock {
                 productImage = 1,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
+                isFavorite = true
+            ),
+            ProductModel(
+                id = 2,
+                productId = "dsa123654",
+                productTitle = "HP Ultr HD",
+                productImage = 1,
+                productPrice = "1299 $",
+                productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
+                id = 3,
+                productId = "dsa123654",
+                productTitle = "HP Ultr HD",
+                productImage = 1,
+                productPrice = "1299 $",
+                productDescription = "ftyjetyje",
+                isFavorite = false
+            ),
+            ProductModel(
+                id = 4,
+                productId = "dsa123654",
+                productTitle = "HP Ultr HD",
+                productImage = 1,
+                productPrice = "1299 $",
+                productDescription = "ftyjetyje",
+                isFavorite = true
+            ),
+            ProductModel(
+                id = 5,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
                 productImage = 1,
@@ -52,7 +80,7 @@ object Mock {
                 productImage = 1,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
-                isFavorite = false
+                isFavorite = true
             ),
             ProductModel(
                 id = 1,
@@ -79,34 +107,7 @@ object Mock {
                 productImage = 1,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
-                isFavorite = false
-            ),
-            ProductModel(
-                id = 1,
-                productId = "dsa123654",
-                productTitle = "HP Ultr HD",
-                productImage = 1,
-                productPrice = "1299 $",
-                productDescription = "ftyjetyje",
-                isFavorite = false
-            ),
-            ProductModel(
-                id = 1,
-                productId = "dsa123654",
-                productTitle = "HP Ultr HD",
-                productImage = 1,
-                productPrice = "1299 $",
-                productDescription = "ftyjetyje",
-                isFavorite = false
-            ),
-            ProductModel(
-                id = 1,
-                productId = "dsa123654",
-                productTitle = "HP Ultr HD",
-                productImage = 1,
-                productPrice = "1299 $",
-                productDescription = "ftyjetyje",
-                isFavorite = false
+                isFavorite = true
             ),
             ProductModel(
                 id = 1,
@@ -211,6 +212,32 @@ fun getMockCategories(): ArrayList<CategoryModel>{
             categoryId = 5,
             categoryName = "All",
             categoryIcon = R.drawable.ic_category_all
+        )
+    )
+}
+
+
+fun getMockColors(): ArrayList<ColorsModel>{
+    return arrayListOf(
+        ColorsModel(
+            colorsId = 1,
+            colorsName =R.color.colorMistyRose
+        ),
+        ColorsModel(
+            colorsId = 2,
+            colorsName = R.color.colorWhiteGreen
+        ),
+        ColorsModel(
+            colorsId = 3,
+            colorsName = R.color.colorWhiteSmoke
+        ),
+        ColorsModel(
+            colorsId = 4,
+            colorsName = R.color.colorWhiteGray
+        ),
+        ColorsModel(
+            colorsId = 5,
+            colorsName = R.color.colorBlack
         )
     )
 }

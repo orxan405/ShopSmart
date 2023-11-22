@@ -10,22 +10,26 @@
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
-            app:destination="@id/productDetailsFragment" />
+            app:destination="@id/productDetailsFragment" >
+
+
+        </action>
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
         android:name="com.nexis.shopsmart.ui.history.HistoryFragment"
-        android:label="HistoryFragment" />
+        android:label="History Fragment" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.nexis.shopsmart.ui.profile.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="Profile Fragment" />
     <fragment
         android:id="@+id/wishlistFragment"
         android:name="com.nexis.shopsmart.ui.wishlist.WishlistFragment"
-        android:label="WishlistFragment" />
+        android:label="Wishlist Fragment" />
     <fragment
         android:id="@+id/productDetailsFragment"
         android:name="com.farzin.shopsmart.ui.details.ProductDetailsFragment"
-        android:label="ProductDetailsFragment" />
+        android:label="Details Product" >
+    </fragment>
 </navigation>

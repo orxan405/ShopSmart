@@ -7,4 +7,9 @@
     <color name="textBorderColor">#BEBEBE</color>
     <color name="gray">#B6B6B6</color>
     <color name="colorSecondaryGreen">#F0F2F1</color>
+    <color name="colorMistyRose">#F5E3DF</color>
+    <color name="colorWhiteSmoke">#ECECEC</color>
+    <color name="colorWhiteGreen">#E4F2DF</color>
+    <color name="colorWhiteGray">#D5E0ED</color>
+    <color name="colorBlack">#3E3D40</color>
 </resources>

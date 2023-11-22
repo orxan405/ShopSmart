@@ -21,11 +21,33 @@
             android:gravity="center"
             android:layout_height="match_parent">
 
+
+            <ImageView
+                android:id="@+id/imgBackArrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="8"
+                android:src="@drawable/ic_arrow_back"
+                />
+
+            <TextView
+                android:id="@+id/txtAppBarTitle"
+                android:layout_width="100dp"
+                android:layout_gravity="center_vertical"
+                tools:text="Profile Fragment"
+                android:layout_marginStart="12dp"
+                android:layout_weight="6"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"/>
+
             <com.nexis.shopsmart.components.custom_views.CustomSearchView
                 android:layout_width="match_parent"
                 android:id="@+id/searchView"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="6"
+                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp">
 
