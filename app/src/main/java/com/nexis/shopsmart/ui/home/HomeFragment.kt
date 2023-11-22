@@ -14,6 +14,7 @@ import com.nexis.shopsmart.components.adapters.ProductAdapter
 import com.nexis.shopsmart.databinding.FragmentHomeBinding
 import com.nexis.shopsmart.util.BundleNames.SELECTED_ITEM
 import com.nexis.shopsmart.util.Mock.getMockProducts
+import com.nexis.shopsmart.util.UtilFunctions.getNavOptions
 import com.nexis.shopsmart.util.getMockBanners
 import com.nexis.shopsmart.util.getMockCategories
 
@@ -34,7 +35,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         productAdapter = ProductAdapter { productModel ->
             findNavController().navigate(
                 R.id.action_homeFragment_to_productDetailsFragment,
-                bundleOf(SELECTED_ITEM to productModel)
+                bundleOf(SELECTED_ITEM to productModel), getNavOptions()
             )
         }
         categoryAdapter = CategoryAdapter { selectedCategory ->

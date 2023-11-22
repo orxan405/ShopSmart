@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.farzin.shopsmarttest.base.BaseActivity
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.ActivityMainBinding
+import com.nexis.shopsmart.ui.search.SearchDialogFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
@@ -25,6 +26,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun initViews() {
         binding.imgBackArrow.setOnClickListener {
             onBackPressed()
+        }
+
+        binding.searchView.setOnClickListener{
+            val dialog = SearchDialogFragment()
+            dialog.show(supportFragmentManager, "Salam")
         }
     }
 

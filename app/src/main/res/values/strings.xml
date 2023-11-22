@@ -8,4 +8,5 @@
     <string name="category_title">Category</string>
     <string name="addToCard">Add to Card</string>
     <string name="monitor">Monitor</string>
+    <string name="last_search">Last Search</string>
 </resources>

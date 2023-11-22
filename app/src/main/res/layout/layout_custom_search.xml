@@ -21,10 +21,13 @@
         android:layout_height="match_parent"
         android:hint="@string/search_hint"
         android:layout_weight="2"
+        android:id="@+id/edtSearchInput"
         android:layout_gravity="center_vertical"
         android:textSize="23sp"
         android:layout_marginHorizontal="12dp"
         android:background="@null"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
         >
 
     </EditText>
