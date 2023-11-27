@@ -1,6 +1,7 @@
 package com.nexis.shopsmart.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
@@ -9,6 +10,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shopssmart.components.adapters.BannerAdapter
 import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.farzin.shopsmarttest.base.BaseFragment
+import com.google.firebase.Firebase
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.database
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.components.adapters.ColorsAdapter
 import com.nexis.shopsmart.components.adapters.ProductAdapter
@@ -30,6 +36,23 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         super.onViewCreated(view, savedInstanceState)
 
         initView()
+
+        val database = Firebase.database
+        val myRef = database.getReference("mesaj")
+
+        myRef.setValue("Salam Dunya..")
+
+        myRef.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val myValue = snapshot.value
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                val onCancelled = error.message
+            }
+
+        })
+
 
     }
 
