@@ -10,6 +10,7 @@ import com.example.shopssmart.components.adapters.BannerAdapter
 import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.farzin.shopsmarttest.base.BaseFragment
 import com.nexis.shopsmart.R
+import com.nexis.shopsmart.components.adapters.ColorsAdapter
 import com.nexis.shopsmart.components.adapters.ProductAdapter
 import com.nexis.shopsmart.databinding.FragmentHomeBinding
 import com.nexis.shopsmart.util.BundleNames.SELECTED_ITEM
@@ -23,6 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     lateinit var productAdapter: ProductAdapter
     lateinit var categoryAdapter: CategoryAdapter
     lateinit var bannerAdapter: BannerAdapter
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,6 +45,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         }
 
         bannerAdapter = BannerAdapter { selectedBannaer -> }
+
+
+
 
         binding.recyclerViewCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewProducts.layoutManager = GridLayoutManager(requireContext(), 2)
