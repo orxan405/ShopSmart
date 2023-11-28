@@ -42,9 +42,9 @@ android {
         viewBinding = true
     }
 
-    kapt{
-        correctErrorTypes = true
-    }
+//    kapt{
+//        correctErrorTypes = true
+//    }
 }
 
 dependencies {
@@ -56,6 +56,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.android.support:support-annotations:28.0.0")
 //    implementation("android.arch.persistence.room:runtime:1.1.1")
     annotationProcessor("android.arch.persistence.room:compiler:1.1.1")
     androidTestImplementation("android.arch.persistence.room:testing:1.1.1")
@@ -63,8 +64,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.42")
+    kapt("com.google.dagger:hilt-android-compiler:2.42")
 }
 
 

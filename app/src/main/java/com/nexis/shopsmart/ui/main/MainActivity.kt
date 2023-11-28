@@ -11,7 +11,10 @@ import com.farzin.shopsmarttest.base.BaseActivity
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.ActivityMainBinding
 import com.nexis.shopsmart.ui.search.SearchDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val bindingInflater: (LayoutInflater) -> ActivityMainBinding
         get() = ActivityMainBinding::inflate
@@ -31,6 +34,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.searchView.setOnClickListener{
             val dialog = SearchDialogFragment()
             dialog.show(supportFragmentManager, "Salam")
+            dialog.onSearch={
+                Log.i("SearchValue", it.toString())
+            }
         }
     }
 

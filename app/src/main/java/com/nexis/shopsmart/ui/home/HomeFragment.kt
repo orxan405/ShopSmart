@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,12 +25,18 @@ import com.nexis.shopsmart.util.Mock.getMockProducts
 import com.nexis.shopsmart.util.UtilFunctions.getNavOptions
 import com.nexis.shopsmart.util.getMockBanners
 import com.nexis.shopsmart.util.getMockCategories
+import com.nexis.shopsmart.view_models.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     lateinit var productAdapter: ProductAdapter
     lateinit var categoryAdapter: CategoryAdapter
     lateinit var bannerAdapter: BannerAdapter
+
+   private val viewModel : HomeViewModel by viewModels()
+
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

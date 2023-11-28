@@ -12,6 +12,7 @@ abstract class BaseDialogFragment<VB: ViewBinding>(
     private val inflate: Inflate<VB>
 ) : DialogFragment() {
 
+    var onSearch: () -> Int = TODO()
     private var _binding: VB? = null
     val binding get() = _binding!!
 
