@@ -16,35 +16,6 @@ class YourCardViewHolder(
         binding.txtQiymeti.text = item.CardQiymeti
         binding.txtRengi.text = item.CardRengi
         binding.txtSay.text = item.CardSayi.toString()
-
-
-        binding.ivMinus.setOnClickListener {
-            var say: Int = 0
-
-            var txtSay: String = binding.txtSay.text.toString()
-
-            var dd: Int = txtSay.toInt()
-
-            if (dd > 0) {
-                say = say - 1
-            } else if (dd <= 0) {
-                binding.txtSay.setText("0")
-            }
-        }
-
-        binding.ivPilus.setOnClickListener {
-            var say: Int = 0
-
-            var txtSay: String = binding.txtSay.text.toString()
-
-            var dd: Int = txtSay.toInt()
-
-            if (dd == 0) {
-                say = say + 1
-            } else if (dd <= 0) {
-                binding.txtSay.setText("0")
-            }
-        }
     }
 
 
