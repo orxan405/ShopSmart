@@ -6,11 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.farzin.shopsmarttest.base.BaseActivity
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.ActivityMainBinding
 import com.nexis.shopsmart.ui.search.SearchDialogFragment
+import com.nexis.shopsmart.ui.your_card.YourCardFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -24,6 +26,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
         initViews()
         setupBottomNav()
+
+        binding.imgCard.setOnClickListener {view ->
+            view.findNavController().navigate(R.id.action_homeFragment_to_yourCardFragment2)
+        }
     }
 
     private fun initViews() {

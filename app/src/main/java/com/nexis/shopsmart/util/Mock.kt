@@ -6,6 +6,7 @@ import com.example.shopssmart.model.local.CategoryModel
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.model.local.ColorsModel
 import com.nexis.shopsmart.model.local.ProductModel
+import com.nexis.shopsmart.model.local.YourCardModel
 
 object Mock {
     fun getMockProducts(): ArrayList<ProductModel> {
@@ -176,7 +177,7 @@ object Mock {
     }
 }
 
-fun getMockBanners(): ArrayList<BannerModel>{
+fun getMockBanners(): ArrayList<BannerModel> {
     return arrayListOf(
         BannerModel(
             bannerId = 1,
@@ -186,7 +187,7 @@ fun getMockBanners(): ArrayList<BannerModel>{
 }
 
 
-fun getMockCategories(): ArrayList<CategoryModel>{
+fun getMockCategories(): ArrayList<CategoryModel> {
     return arrayListOf(
         CategoryModel(
             categoryId = 1,
@@ -217,11 +218,11 @@ fun getMockCategories(): ArrayList<CategoryModel>{
 }
 
 
-fun getMockColors(): ArrayList<ColorsModel>{
+fun getMockColors(): ArrayList<ColorsModel> {
     return arrayListOf(
         ColorsModel(
             colorsId = 1,
-            colorsName =R.color.colorMistyRose
+            colorsName = R.color.colorMistyRose
         ),
         ColorsModel(
             colorsId = 2,
@@ -238,6 +239,44 @@ fun getMockColors(): ArrayList<ColorsModel>{
         ColorsModel(
             colorsId = 5,
             colorsName = R.color.colorBlack
+        )
+    )
+}
+
+
+fun getMockYourCard(): ArrayList<YourCardModel> {
+    return arrayListOf(
+        YourCardModel(
+            CardId = 1,
+            CardBasliq = "Apparel",
+            CardQiymeti = "Apparel",
+            CardRengi = "Apparel",
+            CardSekili = R.drawable.ic_category_apparel,
+            CardSayi = 0
+        ),
+        YourCardModel(
+            CardId = 2,
+            CardBasliq = "Apparel",
+            CardQiymeti = "Apparel",
+            CardRengi = "Apparel",
+            CardSekili = R.drawable.ic_category_apparel,
+            CardSayi = 0
+        ),
+        YourCardModel(
+            CardId = 3,
+            CardBasliq = "Apparel",
+            CardQiymeti = "Apparel",
+            CardRengi = "Apparel",
+            CardSekili = R.drawable.ic_category_apparel,
+            CardSayi = 0
+        ),
+        YourCardModel(
+            CardId = 4,
+            CardBasliq = "Apparel",
+            CardQiymeti = "Apparel",
+            CardRengi = "Apparel",
+            CardSekili = R.drawable.ic_category_apparel,
+            CardSayi = 0
         )
     )
 }

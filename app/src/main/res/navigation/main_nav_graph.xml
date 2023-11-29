@@ -11,9 +11,10 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" >
-
-
         </action>
+        <action
+            android:id="@+id/action_homeFragment_to_yourCardFragment2"
+            app:destination="@id/yourCardFragment2" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
@@ -32,4 +33,8 @@
         android:name="com.farzin.shopsmart.ui.details.ProductDetailsFragment"
         android:label="Details Product" >
     </fragment>
+    <fragment
+        android:id="@+id/yourCardFragment2"
+        android:name="com.nexis.shopsmart.ui.your_card.YourCardFragment"
+        android:label="YourCardFragment" />
 </navigation>
