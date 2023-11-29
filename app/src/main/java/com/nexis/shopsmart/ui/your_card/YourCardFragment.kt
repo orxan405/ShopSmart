@@ -15,14 +15,17 @@ class YourCardFragment: BaseFragment<FragmentYourCardBinding>(FragmentYourCardBi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
+
+
+
     }
 
     private fun initView() {
-        val item = requireArguments().getParcelable<YourCardModel>(BundleNames.SELECTED_ITEM)
+//        val item = requireArguments().getParcelable<YourCardModel>(BundleNames.SELECTED_ITEM)
 
         yourCardAdapter = YourCardAdapter { selectedCards -> }
 
-        binding.recyclerYourCard.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerYourCard.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         val cardList = getMockYourCard()
 

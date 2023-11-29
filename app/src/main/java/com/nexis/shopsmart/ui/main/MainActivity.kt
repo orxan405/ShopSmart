@@ -28,7 +28,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         setupBottomNav()
 
         binding.imgCard.setOnClickListener {view ->
-            view.findNavController().navigate(R.id.action_homeFragment_to_yourCardFragment2)
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+
+            val yourFragment = YourCardFragment()
+            fragmentTransaction.replace(R.id.container, yourFragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
     }
 

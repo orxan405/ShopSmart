@@ -248,34 +248,34 @@ fun getMockYourCard(): ArrayList<YourCardModel> {
     return arrayListOf(
         YourCardModel(
             CardId = 1,
-            CardBasliq = "Apparel",
-            CardQiymeti = "Apparel",
-            CardRengi = "Apparel",
+            CardBasliq = "Apparel1",
+            CardQiymeti = "123",
+            CardRengi = "Qara",
             CardSekili = R.drawable.ic_category_apparel,
             CardSayi = 0
         ),
         YourCardModel(
             CardId = 2,
-            CardBasliq = "Apparel",
-            CardQiymeti = "Apparel",
-            CardRengi = "Apparel",
-            CardSekili = R.drawable.ic_category_apparel,
+            CardBasliq = "Apparel2",
+            CardQiymeti = "456",
+            CardRengi = "Qirmizi",
+            CardSekili = R.drawable.ic_category_school,
             CardSayi = 0
         ),
         YourCardModel(
             CardId = 3,
-            CardBasliq = "Apparel",
-            CardQiymeti = "Apparel",
-            CardRengi = "Apparel",
-            CardSekili = R.drawable.ic_category_apparel,
+            CardBasliq = "Apparel3",
+            CardQiymeti = "789",
+            CardRengi = "Boz",
+            CardSekili = R.drawable.ic_category_electronic,
             CardSayi = 0
         ),
         YourCardModel(
             CardId = 4,
-            CardBasliq = "Apparel",
-            CardQiymeti = "Apparel",
-            CardRengi = "Apparel",
-            CardSekili = R.drawable.ic_category_apparel,
+            CardBasliq = "Apparel4",
+            CardQiymeti = "951",
+            CardRengi = "Ag",
+            CardSekili = R.drawable.ic_category_sports,
             CardSayi = 0
         )
     )
