@@ -12,9 +12,9 @@ class YourCardViewHolder(
 ) : BaseViewHolder<YourCardModel, ItemYourCardBinding>(binding) {
     override fun bind(item: YourCardModel) {
         binding.ivYourCard.setImageResource(item.CardSekili)
-        binding.txtBasliq.text = item.CardBasliq
-        binding.txtQiymeti.text = item.CardQiymeti
-        binding.txtRengi.text = item.CardRengi
+        binding.txtBasliq.text = "Məhsulun adı: " + item.CardBasliq
+        binding.txtQiymeti.text ="Qiyməti: " + item.CardQiymeti + " AZN"
+        binding.txtRengi.text = "Rəngi: " + item.CardRengi
         binding.txtSay.text = item.CardSayi.toString()
         binding.ivMinus.isEnabled = false
         binding.ivPilus.isEnabled = false

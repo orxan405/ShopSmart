@@ -258,7 +258,7 @@ fun getMockYourCard(): ArrayList<YourCardModel> {
             CardId = 2,
             CardBasliq = "Apparel2",
             CardQiymeti = "456",
-            CardRengi = "Qirmizi",
+            CardRengi = "Qırmızı",
             CardSekili = R.drawable.ic_category_school,
             CardSayi = 0
         ),
@@ -274,7 +274,7 @@ fun getMockYourCard(): ArrayList<YourCardModel> {
             CardId = 4,
             CardBasliq = "Apparel4",
             CardQiymeti = "951",
-            CardRengi = "Ag",
+            CardRengi = "Ağ",
             CardSekili = R.drawable.ic_category_sports,
             CardSayi = 0
         )
