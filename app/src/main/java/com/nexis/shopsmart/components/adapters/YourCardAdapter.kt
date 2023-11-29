@@ -17,33 +17,5 @@ class YourCardAdapter(val onClick: (YourCardAdapter) -> Unit) :
     override fun createViewHolder(binding: ItemYourCardBinding, viewType: Int): YourCardViewHolder {
         return YourCardViewHolder(binding, onClick)
 
-//        binding.ivMinus.setOnClickListener {
-//            var say: Int = 0
-//
-//            var txtSay: String = binding.txtSay.text.toString()
-//
-//            var dd: Int = txtSay.toInt()
-//
-//            if (dd > 0) {
-//                say = say - 1
-//            } else if (dd <= 0) {
-//                binding.txtSay.setText("0")
-//            }
-//        }
-//
-//        binding.ivPilus.setOnClickListener {
-//            var say: Int = 0
-//
-//            var txtSay: String = binding.txtSay.text.toString()
-//
-//            var dd: Int = txtSay.toInt()
-//
-//            if (dd == 0) {
-//                say = say + 1
-//            } else if (dd <= 0) {
-//                binding.txtSay.setText("0")
-//            }
-//        }
-
     }
 }
