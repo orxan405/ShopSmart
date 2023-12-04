@@ -20,6 +20,7 @@ import com.nexis.shopsmart.R
 import com.nexis.shopsmart.components.adapters.ColorsAdapter
 import com.nexis.shopsmart.components.adapters.ProductAdapter
 import com.nexis.shopsmart.databinding.FragmentHomeBinding
+import com.nexis.shopsmart.model.local.ProductModel
 import com.nexis.shopsmart.util.BundleNames.SELECTED_ITEM
 import com.nexis.shopsmart.util.Mock.getMockProducts
 import com.nexis.shopsmart.util.UtilFunctions.getNavOptions
@@ -27,6 +28,7 @@ import com.nexis.shopsmart.util.getMockBanners
 import com.nexis.shopsmart.util.getMockCategories
 import com.nexis.shopsmart.view_models.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.UUID
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
@@ -43,6 +45,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         super.onViewCreated(view, savedInstanceState)
 
         initView()
+
+        viewModel.getAllProduct()
 
         val database = Firebase.database
         val myRef = database.getReference("mesaj")
@@ -65,6 +69,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private fun initView() {
         productAdapter = ProductAdapter { productModel ->
+
+            val updatedItem = productModel.copy(
+                productId = UUID.randomUUID().toString()
+            )
+
+            viewModel.addNewProduct(updatedItem)
+
             findNavController().navigate(
                 R.id.action_homeFragment_to_productDetailsFragment,
                 bundleOf(SELECTED_ITEM to productModel), getNavOptions()

@@ -12,163 +12,145 @@ object Mock {
     fun getMockProducts(): ArrayList<ProductModel> {
         return arrayListOf(
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
             ),
             ProductModel(
-                id = 2,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 3,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 4,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
             ),
             ProductModel(
-                id = 5,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
             ),
             ProductModel(
-                id = 1,
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = 1,
+                productImage = R.drawable.ic_category_apparel,
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false

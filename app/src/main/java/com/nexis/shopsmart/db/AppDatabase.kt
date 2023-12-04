@@ -1,4 +1,10 @@
 package com.nexis.shopsmart.db
 
-class AppDatabase {
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import com.nexis.shopsmart.model.local.ProductModel
+
+@Database(entities = [ProductModel::class], version = 2)
+abstract class AppDatabase:RoomDatabase() {
+    abstract fun getProductDao():ProductDao
 }
