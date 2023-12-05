@@ -30,6 +30,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.imgCard.setOnClickListener {view ->
             findNavController(R.id.container).navigate(R.id.yourCardFragment2)
         }
+
+        binding.fab.setOnClickListener{
+            findNavController(R.id.container).navigate(R.id.addProductFragment)
+        }
     }
 
     private fun initViews() {
