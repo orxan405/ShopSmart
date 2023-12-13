@@ -8,7 +8,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.farzin.shopsmarttest.base.BaseActivity
+import com.nexis.shopsmart.base.BaseActivity
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.ActivityMainBinding
 import com.nexis.shopsmart.ui.search.SearchDialogFragment

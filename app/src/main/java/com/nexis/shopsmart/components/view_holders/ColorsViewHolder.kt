@@ -1,6 +1,6 @@
 package com.nexis.shopsmart.components.view_holders
 
-import com.farzin.shopsmarttest.base.BaseViewHolder
+import com.nexis.shopsmart.base.BaseViewHolder
 import com.nexis.shopsmart.components.adapters.ColorsAdapter
 import com.nexis.shopsmart.databinding.ItemColorsBinding
 import com.nexis.shopsmart.model.local.ColorsModel

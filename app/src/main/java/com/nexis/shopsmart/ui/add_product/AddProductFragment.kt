@@ -10,7 +10,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import com.example.shopssmart.components.adapters.CategoryAdapter
-import com.farzin.shopsmarttest.base.BaseFragment
+import com.nexis.shopsmart.base.BaseFragment
 import com.nexis.shopsmart.databinding.FragmentAddProductBinding
 import com.nexis.shopsmart.model.local.ProductModel
 import com.nexis.shopsmart.view_models.AddProductViewModel

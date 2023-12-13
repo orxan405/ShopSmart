@@ -3,7 +3,7 @@ package com.example.shopssmart.components.view_holders
 
 import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.example.shopssmart.model.local.CategoryModel
-import com.farzin.shopsmarttest.base.BaseViewHolder
+import com.nexis.shopsmart.base.BaseViewHolder
 import com.nexis.shopsmart.databinding.ItemCategoryBinding
 
 class CategoryViewHolder(

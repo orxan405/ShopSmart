@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shopssmart.components.adapters.BannerAdapter
 import com.example.shopssmart.components.adapters.CategoryAdapter
-import com.farzin.shopsmarttest.base.BaseFragment
+import com.nexis.shopsmart.base.BaseFragment
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

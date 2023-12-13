@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.shopssmart.components.view_holders.CategoryViewHolder
 import com.example.shopssmart.model.local.CategoryModel
-import com.farzin.shopsmarttest.base.BaseRecyclerAdapter
+import com.nexis.shopsmart.base.BaseRecyclerAdapter
 import com.nexis.shopsmart.databinding.ItemCategoryBinding
 
 class CategoryAdapter(val onClick: (CategoryModel) -> Unit) :

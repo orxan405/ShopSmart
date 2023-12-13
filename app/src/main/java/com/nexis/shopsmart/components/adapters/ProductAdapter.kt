@@ -3,7 +3,7 @@ package com.nexis.shopsmart.components.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import com.farzin.shopsmarttest.base.BaseRecyclerAdapter
+import com.nexis.shopsmart.base.BaseRecyclerAdapter
 import com.nexis.shopsmart.components.view_holders.ProductViewHolder
 import com.nexis.shopsmart.databinding.ItemProductViewBinding
 import com.nexis.shopsmart.model.local.ProductModel

@@ -1,6 +1,6 @@
 package com.nexis.shopsmart.components.view_holders
 
-import com.farzin.shopsmarttest.base.BaseViewHolder
+import com.nexis.shopsmart.base.BaseViewHolder
 import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.ItemProductViewBinding
 import com.nexis.shopsmart.model.local.ProductModel
