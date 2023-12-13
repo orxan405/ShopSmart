@@ -7,7 +7,7 @@ import com.nexis.shopsmart.model.local.ColorsModel
 
 class ColorsViewHolder(
     val binding: ItemColorsBinding,
-    val onClick: (ColorsAdapter) -> Unit
+    val onClick: (ColorsModel) -> Unit
 ) :  BaseViewHolder<ColorsModel, ItemColorsBinding>(binding) {
     override fun bind(item: ColorsModel) {
         binding.ivColors.setImageResource(item.colorsName)

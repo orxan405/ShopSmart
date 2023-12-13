@@ -57,7 +57,10 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
     implementation("com.google.firebase:firebase-database:20.3.0")
+    implementation("com.google.firebase:firebase-storage")
+
     implementation("com.android.support:support-annotations:28.0.0")
 //    implementation("android.arch.persistence.room:runtime:1.1.1")
     annotationProcessor("android.arch.persistence.room:compiler:1.1.1")

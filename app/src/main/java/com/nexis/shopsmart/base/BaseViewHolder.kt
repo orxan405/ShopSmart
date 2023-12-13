@@ -1,4 +1,4 @@
-package com.farzin.shopsmarttest.base
+package com.nexis.shopsmart.base
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding

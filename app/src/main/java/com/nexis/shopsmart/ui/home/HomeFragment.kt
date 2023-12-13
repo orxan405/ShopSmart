@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -39,14 +40,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
    private val viewModel : HomeViewModel by viewModels()
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initView()
 
         viewModel.getAllProduct()
+
+        binding.fab.setOnClickListener{
+            findNavController().navigate(R.id.addProductFragment)
+        }
 
         val database = Firebase.database
         val myRef = database.getReference("mesaj")
@@ -68,25 +71,32 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     }
 
     private fun initView() {
-        productAdapter = ProductAdapter { productModel ->
-
+//        productAdapter = ProductAdapter { productModel ->
+//
+//            val updatedItem = productModel.copy(
+//                productId = UUID.randomUUID().toString()
+//            )
+//
+//            viewModel.addNewProduct(updatedItem)
+//
+//            findNavController().navigate(
+//                R.id.action_homeFragment_to_productDetailsFragment,
+//                bundleOf(SELECTED_ITEM to productModel), getNavOptions()
+//            )
+//        }
+        productAdapter = ProductAdapter{ productModel ->
             val updatedItem = productModel.copy(
                 productId = UUID.randomUUID().toString()
             )
-
-            viewModel.addNewProduct(updatedItem)
-
-            findNavController().navigate(
-                R.id.action_homeFragment_to_productDetailsFragment,
-                bundleOf(SELECTED_ITEM to productModel), getNavOptions()
-            )
+            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, bundleOf(SELECTED_ITEM to productModel), getNavOptions())
         }
-        categoryAdapter = CategoryAdapter { selectedCategory ->
+        categoryAdapter = CategoryAdapter { selectedCategory->
 
         }
 
-        bannerAdapter = BannerAdapter { selectedBannaer -> }
+        bannerAdapter = BannerAdapter {
 
+        }
 
 
 
@@ -105,6 +115,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         productAdapter.setData(list)
         categoryAdapter.setData(categoryList)
         bannerAdapter.setData(bannerList)
+
+        binding.swipeHome.setOnRefreshListener {
+            // get all products
+            binding.swipeHome.isRefreshing = true
+        }
+
+
     }
 
 }

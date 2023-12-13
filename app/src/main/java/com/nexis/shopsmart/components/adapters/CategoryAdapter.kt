@@ -7,7 +7,7 @@ import com.example.shopssmart.model.local.CategoryModel
 import com.farzin.shopsmarttest.base.BaseRecyclerAdapter
 import com.nexis.shopsmart.databinding.ItemCategoryBinding
 
-class CategoryAdapter(val onClick: (CategoryAdapter) -> Unit) :
+class CategoryAdapter(val onClick: (CategoryModel) -> Unit) :
     BaseRecyclerAdapter<CategoryModel, ItemCategoryBinding, CategoryViewHolder>() {
     override fun createViewBinding(parent: ViewGroup, viewType: Int): ItemCategoryBinding {
         return ItemCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)

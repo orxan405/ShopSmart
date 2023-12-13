@@ -8,12 +8,13 @@ import com.nexis.shopsmart.databinding.ItemCategoryBinding
 
 class CategoryViewHolder(
     val binding: ItemCategoryBinding,
-    val onClick: (CategoryAdapter) -> Unit
+    val onClick: (CategoryModel) -> Unit
 ) :
     BaseViewHolder<CategoryModel, ItemCategoryBinding>(binding) {
     override fun bind(item: CategoryModel) {
         binding.txtCategoryName.text = item.categoryName
         binding.imageCategory.setImageResource(item.categoryIcon)
+
 
     }
 }

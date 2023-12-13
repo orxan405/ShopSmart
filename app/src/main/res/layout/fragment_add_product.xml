@@ -1,84 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.add_product.AddProductFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/imgSave"
-        android:layout_width="141dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/imgAddProductImage"
+        android:layout_width="230dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="24dp"
+        android:layoutAnimation="@anim/item_layout_animation"
+        android:src="@drawable/img_add_product_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_apparel" />
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="290dp"
+    <com.farzin.shopsmart.components.custom_views.TextInputField
+        android:id="@+id/inputProductTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:layoutAnimation="@anim/item_layout_animation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgSave"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/imgAddProductImage">
+    </com.farzin.shopsmart.components.custom_views.TextInputField>
 
-    <EditText
-        android:id="@+id/editTextText5"
-        android:layout_width="wrap_content"
+    <com.farzin.shopsmart.components.custom_views.TextInputField
+        android:id="@+id/inputProductPrice"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:layoutAnimation="@anim/item_layout_animation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductTitle">
+    </com.farzin.shopsmart.components.custom_views.TextInputField>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="209dp"
+
+    <com.farzin.shopsmart.components.custom_views.TextInputField
+        android:id="@+id/inputProductDescription"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:layoutAnimation="@anim/item_layout_animation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductPrice">
+    </com.farzin.shopsmart.components.custom_views.TextInputField>
+
+
+    <com.farzin.shopsmart.components.custom_views.SpinnerView
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:layoutAnimation="@anim/item_layout_animation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputProductDescription">
+    </com.farzin.shopsmart.components.custom_views.SpinnerView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAddProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryButtonStyle"
+        android:textAllCaps="false"
+        android:text="@string/addProduct"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        android:layoutAnimation="@anim/item_layout_animation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategory">
+    </androidx.appcompat.widget.AppCompatButton>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

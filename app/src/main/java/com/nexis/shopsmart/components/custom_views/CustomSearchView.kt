@@ -13,22 +13,26 @@ class CustomSearchView @JvmOverloads constructor(
     val attsSet: AttributeSet? = null,
     val styleDef: Int = 0
 ) : LinearLayout(ctx, attsSet, styleDef) {
-    private val binding = LayoutCustomSearchBinding.inflate(LayoutInflater.from(context), this, true)
+
+
+    private val binding: LayoutCustomSearchBinding =
+        LayoutCustomSearchBinding.inflate(LayoutInflater.from(context), this, true)
+
+    var searchText = binding.edtSearchInput.text.toString()
+
+    var onSearchInView: (String) ->Unit = {}
 
     init {
+        submit()
+    }
+
+    fun submit(){
         binding.edtSearchInput.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                Log.i( "SearchEdit",binding.edtSearchInput.text.toString())
-
-
-
+                onSearchInView(binding.edtSearchInput.text.toString())
                 return@setOnEditorActionListener true
             }
             false
         }
-    }
-
-    fun setSearch(onSearch: (String) -> Unit){
-
     }
 }

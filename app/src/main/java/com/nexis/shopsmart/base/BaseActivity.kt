@@ -1,4 +1,4 @@
-package com.farzin.shopsmarttest.base
+package com.nexis.shopsmart.base
 
 import android.graphics.Color
 import android.os.Bundle

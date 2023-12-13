@@ -22,7 +22,7 @@ data class ProductModel(
     val productTitle: String? = null,
 
     @ColumnInfo(name = "productImage")
-    val productImage: Int? = null,
+    val productImage: String? = null,
 
     @ColumnInfo(name = "productPrice")
     val productPrice: String? = null,

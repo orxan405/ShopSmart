@@ -24,8 +24,4 @@ class HomeViewModel @Inject constructor(private val homeRepository: HomeReposito
         homeRepository.getAllProducts()
     }
 
-    fun addNewProduct(productModel: ProductModel) {
-        homeRepository.addNewProduct(productModel)
-    }
-
 }

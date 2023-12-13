@@ -1,72 +1,89 @@
 package com.nexis.shopsmart.ui.add_product
 
+import android.Manifest
+import android.content.ContentValues
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.provider.MediaStore
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.viewModels
+import com.example.shopssmart.components.adapters.CategoryAdapter
 import com.farzin.shopsmarttest.base.BaseFragment
-import com.nexis.shopsmart.R
 import com.nexis.shopsmart.databinding.FragmentAddProductBinding
-import com.nexis.shopsmart.databinding.FragmentHomeBinding
-class AddProductFragment : BaseFragment<FragmentAddProductBinding>(FragmentAddProductBinding::inflate) {
+import com.nexis.shopsmart.model.local.ProductModel
+import com.nexis.shopsmart.view_models.AddProductViewModel
+import java.util.UUID
 
-    lateinit var imageView: ImageView
+class AddProductFragment :
+    BaseFragment<FragmentAddProductBinding>(FragmentAddProductBinding::inflate) {
 
-    private val gender = ArrayList<String>()
-    private lateinit var veriAdap: ArrayAdapter<String>
+    private val cameraPermission = Manifest.permission.CAMERA
 
-//    companion object{
-//        val IMAGE_REQUEST_CODE = 100
-//    }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_product, container, false)
-    }
+    private var imageUri: Uri? = null
+
+    private val viewModel: AddProductViewModel by viewModels()
+
+
+    lateinit var addProduct: CategoryAdapter
+
+
+    private val cameraPermissonResult =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isPermitted ->
+            if (isPermitted) {
+                startCameraAction()
+            }
+        }
+
+    private val captureResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            imageUri?.let {
+                // binding.imgAddProductImage.setImageURI(it)
+            }
+        }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        gender.add("Kişi")
-        gender.add("Qadın")
-
-        veriAdap = ArrayAdapter(
-            requireContext(),
-            android.R.layout.simple_list_item_1,
-            android.R.id.text1,
-            gender
-        )
-
-        binding.spinner.adapter = veriAdap
-
-
-//        binding.imgSave.setOnClickListener{
-//            pickImageGallery()
-//
-//        }
-
-
+        initView()
     }
 
-//    fun pickImageGallery(){
-//        val intent = Intent(Intent.ACTION_PICK)
-//        intent.type= "image/*"
-//        startActivityForResult(intent, IMAGE_REQUEST_CODE)
-//    }
-//
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == IMAGE_REQUEST_CODE && resultCode == AppCompatActivity.RESULT_OK){
-//            imageView.setImageURI(data?.data)
-//        }
-//    }
+    private fun initView() {
+        binding.inputProductTitle.setTitle("Name")
+        binding.inputProductPrice.setTitle("Price")
+        binding.inputProductDescription.setTitle("Description")
 
+        binding.imgAddProductImage.setOnClickListener {
+            cameraPermissonResult.launch(cameraPermission)
+        }
+
+        binding.buttonAddProduct.setOnClickListener {path ->
+            imageUri?.let { image ->
+                viewModel.uploadImage(image) { path ->
+                    val productItem = ProductModel(
+                        productId = UUID.randomUUID().toString(),
+                        productTitle = "",
+                        productPrice = "",
+                        productDescription = "",
+                        productImage = path
+                    )
+                    viewModel.addNewProduct(productItem)
+                }
+            }
+        }
+    }
+
+    private fun startCameraAction() {
+
+        imageUri = requireActivity().contentResolver.insert(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+            ContentValues()
+        )
+        val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
+
+        captureResult.launch(cameraIntent)
+
+    }
 
 }

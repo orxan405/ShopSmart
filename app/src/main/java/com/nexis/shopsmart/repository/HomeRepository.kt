@@ -22,54 +22,34 @@ class HomeRepository @Inject constructor(
     private val productDao: ProductDao
 ) {
     fun getNewAddedProduct() {
-        val productRef = firebaseDatabase.getReference().child("dddd")
+        val productRef = firebaseDatabase.reference.child(PRODUCT_REFERENCE_NAME)
 
         productRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 for (sh in snapshot.children) {
                     val product = sh.getValue(ProductModel::class.java)
-
                     product?.let {
                         CoroutineScope(Dispatchers.IO).launch {
                             insertNewProduct(it)
                         }
                     }
-
-                    Log.i("FirebaseDataChange", "onCancelled: ${product.toString()}")
+                    Log.i("FirebaseDataChange", product.toString())
                 }
-
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.i("FirebaseError", "onCancelled: ${error.toString()}")
+                Log.i("FirebaseError", error.toString())
             }
-
         })
+
+    }
+
+    suspend fun getAllProducts() {
     }
 
     suspend fun insertNewProduct(productModel: ProductModel) = withContext(Dispatchers.IO) {
         productDao.insertProduct(productModel)
-    }
-
-
-    fun addNewProduct(productModel: ProductModel) {
-//        val productRef = firebaseDatabase.getReference().child(productModel.productId.toString())
-
-        firebaseDatabase.reference.child("dddd").child(productModel.productId.toString())
-            .setValue(productModel)
-
-//        productRef.setValue(productModel)
-    }
-
-//    suspend fun getAllProducts(): Flow<List<ProductModel>> {
-//        val flow = flow {
-//            productDao.getAllProducts()
-//            emit()
-//        }
-
-    suspend fun getAllProducts() {
-
     }
 
 }

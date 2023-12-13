@@ -10,11 +10,11 @@ class ProductViewHolder(val binding: ItemProductViewBinding,
     override fun bind(item: ProductModel) {
         binding.txtProductTitle.text = item.productTitle
         binding.txtProductPrice.text = item.productPrice
-        item.productImage?.let { binding.productImage.setImageResource(it) }
+
         if(item.isFavorite){
-            binding.imgMakeFavourite.setImageResource(R.drawable.ic_heart_red)
-        }else{
             binding.imgMakeFavourite.setImageResource(R.drawable.ic_heart)
+        }else{
+            binding.imgMakeFavourite.setImageResource(R.drawable.ic_heart_red)
         }
 
         binding.item.setOnClickListener {
