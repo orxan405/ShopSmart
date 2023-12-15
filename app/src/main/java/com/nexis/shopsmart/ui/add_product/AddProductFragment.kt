@@ -42,6 +42,7 @@ class AddProductFragment :
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             imageUri?.let {
                  binding.imgAddProductImage.setImageURI(it)
+
             }
         }
 
