@@ -41,7 +41,7 @@ class AddProductFragment :
     private val captureResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             imageUri?.let {
-                // binding.imgAddProductImage.setImageURI(it)
+                 binding.imgAddProductImage.setImageURI(it)
             }
         }
 
@@ -72,6 +72,8 @@ class AddProductFragment :
                     viewModel.addNewProduct(productItem)
                 }
             }
+
+            binding.inputProductTitle.setTitle("")
         }
     }
 

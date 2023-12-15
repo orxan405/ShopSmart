@@ -13,7 +13,7 @@ data class ProductModel(
 
     @PrimaryKey
     @ColumnInfo(name = "id")
-    val id: Int? = null,
+    val id: Int? = 0,
 
     @ColumnInfo(name = "productId")
     val productId: String? = null,
