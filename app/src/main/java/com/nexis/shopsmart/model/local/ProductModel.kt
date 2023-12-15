@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "product_table"  )
+@Entity(tableName = "product_table", indices = [Index(value = ["productId"], unique = true)]  )
 data class ProductModel(
 
     @PrimaryKey

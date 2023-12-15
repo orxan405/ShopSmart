@@ -14,7 +14,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
@@ -22,7 +22,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -30,7 +30,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -38,7 +38,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
@@ -46,7 +46,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -54,7 +54,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -62,7 +62,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -70,7 +70,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
@@ -78,7 +78,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -86,7 +86,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -94,7 +94,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = true
@@ -102,7 +102,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -110,7 +110,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -118,7 +118,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -126,7 +126,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -134,7 +134,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -142,7 +142,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false
@@ -150,7 +150,7 @@ object Mock {
             ProductModel(
                 productId = "dsa123654",
                 productTitle = "HP Ultr HD",
-                productImage = R.drawable.ic_category_apparel,
+                productImage = "",
                 productPrice = "1299 $",
                 productDescription = "ftyjetyje",
                 isFavorite = false

@@ -3,7 +3,7 @@ package com.nexis.shopsmart.ui.your_card
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.farzin.shopsmarttest.base.BaseFragment
+import com.nexis.shopsmart.base.BaseFragment
 import com.nexis.shopsmart.components.adapters.YourCardAdapter
 import com.nexis.shopsmart.databinding.FragmentYourCardBinding
 import com.nexis.shopsmart.model.local.YourCardModel

@@ -14,8 +14,10 @@ import com.nexis.shopsmart.base.BaseFragment
 import com.nexis.shopsmart.databinding.FragmentAddProductBinding
 import com.nexis.shopsmart.model.local.ProductModel
 import com.nexis.shopsmart.view_models.AddProductViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
+@AndroidEntryPoint
 class AddProductFragment :
     BaseFragment<FragmentAddProductBinding>(FragmentAddProductBinding::inflate) {
 
