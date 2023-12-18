@@ -2,7 +2,7 @@ package com.nexis.shopsmart.components.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.farzin.shopsmarttest.base.BaseRecyclerAdapter
+import com.nexis.shopsmart.base.BaseRecyclerAdapter
 import com.nexis.shopsmart.components.view_holders.YourCardViewHolder
 import com.nexis.shopsmart.databinding.FragmentYourCardBinding
 import com.nexis.shopsmart.databinding.ItemYourCardBinding

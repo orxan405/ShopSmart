@@ -8,12 +8,12 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "product_table"  )
+@Entity(tableName = "product_table", indices = [Index(value = ["productId"], unique = true)]  )
 data class ProductModel(
 
     @PrimaryKey
     @ColumnInfo(name = "id")
-    val id: Int? = null,
+    val id: Int? = 0,
 
     @ColumnInfo(name = "productId")
     val productId: String? = null,

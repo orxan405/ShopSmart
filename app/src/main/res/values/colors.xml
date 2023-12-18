@@ -5,6 +5,7 @@
     <color name="primaryColor">#67C4A7</color>
     <color name="GreyColor">#939393</color>
     <color name="textBorderColor">#BEBEBE</color>
+    <color name="textColor">#161716</color>
     <color name="gray">#B6B6B6</color>
     <color name="colorSecondaryGreen">#F0F2F1</color>
     <color name="colorMistyRose">#F5E3DF</color>
@@ -12,4 +13,6 @@
     <color name="colorWhiteGreen">#E4F2DF</color>
     <color name="colorWhiteGray">#D5E0ED</color>
     <color name="colorBlack">#3E3D40</color>
+    <color name="colorInputStroke">#BABABA</color>
+    <color name="colorInputFill">#EEEEEE</color>
 </resources>
