@@ -21,7 +21,9 @@ class HomeViewModel @Inject constructor(private val homeRepository: HomeReposito
         homeRepository.getNewAddedProduct()
     }
     fun getAllProduct() = viewModelScope.launch {
-        homeRepository.getAllProducts()
+        homeRepository.getAllProducts().also {productList ->
+            _productsLiveData.postValue(productList as ArrayList<ProductModel>)
+        }
     }
 
 }

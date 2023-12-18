@@ -12,4 +12,7 @@
     <color name="colorWhiteGreen">#E4F2DF</color>
     <color name="colorWhiteGray">#D5E0ED</color>
     <color name="colorBlack">#3E3D40</color>
+    <color name="colorInputStroke">#BABABA</color>
+    <color name="colorInputFill">#EEEEEE</color>
+    <color name="textColor">#161716</color>
 </resources>

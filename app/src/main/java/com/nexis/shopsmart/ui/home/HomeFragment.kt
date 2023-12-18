@@ -38,7 +38,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     lateinit var categoryAdapter: CategoryAdapter
     lateinit var bannerAdapter: BannerAdapter
 
-   private val viewModel : HomeViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,7 +47,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         viewModel.getAllProduct()
 
-        binding.fab.setOnClickListener{
+        observerResults()
+
+        binding.fab.setOnClickListener {
             findNavController().navigate(R.id.addProductFragment)
         }
 
@@ -56,7 +58,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         myRef.setValue("Salam Dunya..")
 
-        myRef.addValueEventListener(object : ValueEventListener{
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val myValue = snapshot.value
             }
@@ -66,9 +68,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             }
 
         })
-
-
     }
+
+    private fun observerResults() {
+        viewModel.productsLiveData.observe(viewLifecycleOwner) { productList ->
+            productAdapter.setData(productList)
+            binding.swipeHome.isRefreshing = false
+        }
+    }
+
 
     private fun initView() {
 //        productAdapter = ProductAdapter { productModel ->
@@ -84,13 +92,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 //                bundleOf(SELECTED_ITEM to productModel), getNavOptions()
 //            )
 //        }
-        productAdapter = ProductAdapter{ productModel ->
+        productAdapter = ProductAdapter { productModel ->
             val updatedItem = productModel.copy(
                 productId = UUID.randomUUID().toString()
             )
-            findNavController().navigate(R.id.action_homeFragment_to_productDetailsFragment, bundleOf(SELECTED_ITEM to productModel), getNavOptions())
+            findNavController().navigate(
+                R.id.action_homeFragment_to_productDetailsFragment,
+                bundleOf(SELECTED_ITEM to productModel),
+                getNavOptions()
+            )
         }
-        categoryAdapter = CategoryAdapter { selectedCategory->
+        categoryAdapter = CategoryAdapter { selectedCategory ->
 
         }
 
@@ -100,9 +112,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
 
 
-        binding.recyclerViewCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerViewCategory.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewProducts.layoutManager = GridLayoutManager(requireContext(), 2)
-        binding.recyclerViewBanner.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerViewBanner.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         val list = getMockProducts()
         val categoryList = getMockCategories()
@@ -117,7 +131,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         bannerAdapter.setData(bannerList)
 
         binding.swipeHome.setOnRefreshListener {
-            // get all products
+            viewModel.getAllProduct()
             binding.swipeHome.isRefreshing = true
         }
 

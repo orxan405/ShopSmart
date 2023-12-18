@@ -6,6 +6,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import com.nexis.shopsmart.db.ProductDao
 import com.nexis.shopsmart.model.local.ProductModel
 import com.nexis.shopsmart.util.FirebaseReferenceNames.PRODUCT_REFERENCE_NAME
@@ -45,7 +46,8 @@ class HomeRepository @Inject constructor(
 
     }
 
-    suspend fun getAllProducts() {
+    suspend fun getAllProducts() = withContext(Dispatchers.IO) {
+        productDao.getAllProducts()
     }
 
     suspend fun insertNewProduct(productModel: ProductModel) = withContext(Dispatchers.IO) {

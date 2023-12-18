@@ -3,7 +3,7 @@ package com.farzin.shopsmart.ui.details
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.farzin.shopsmarttest.base.BaseFragment
+import com.nexis.shopsmart.base.BaseFragment
 import com.nexis.shopsmart.components.adapters.ColorsAdapter
 import com.nexis.shopsmart.databinding.FragmentProductDetailsBinding
 import com.nexis.shopsmart.model.local.ProductModel
