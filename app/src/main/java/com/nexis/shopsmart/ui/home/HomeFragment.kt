@@ -66,7 +66,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             override fun onCancelled(error: DatabaseError) {
                 val onCancelled = error.message
 
-
             }
 
         })
