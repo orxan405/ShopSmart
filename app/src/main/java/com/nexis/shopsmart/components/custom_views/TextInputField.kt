@@ -16,7 +16,6 @@ class TextInputField @JvmOverloads constructor(
 ) : LinearLayout(ctx, attrSet, styleDef) {
 
 
-
     private val binding: LayoutTextInputFieldBinding =
         LayoutTextInputFieldBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -26,6 +25,10 @@ class TextInputField @JvmOverloads constructor(
 
     fun setInput(input: String) {
         binding.edtInput.setText(input)
+    }
+
+    fun getText(): String {
+        return binding.edtInput.text.toString()
     }
 
 }

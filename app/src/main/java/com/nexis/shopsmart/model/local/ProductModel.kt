@@ -27,6 +27,9 @@ data class ProductModel(
     @ColumnInfo(name = "productPrice")
     val productPrice: String? = null,
 
+    @ColumnInfo(name = "productCategoryId")
+    val productCategoryId: Int? = null,
+
     @ColumnInfo(name = "productDescription")
     val productDescription: String? = null,
 

@@ -94,9 +94,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 //            )
 //        }
         productAdapter = ProductAdapter { productModel ->
-            val updatedItem = productModel.copy(
-                productId = UUID.randomUUID().toString()
-            )
+
             findNavController().navigate(
                 R.id.action_homeFragment_to_productDetailsFragment,
                 bundleOf(SELECTED_ITEM to productModel),
@@ -119,7 +117,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.recyclerViewBanner.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        val list = getMockProducts()
+        //val list = getMockProducts()  // burasini sildik
         val categoryList = getMockCategories()
         val bannerList = getMockBanners()
 
@@ -127,7 +125,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         binding.recyclerViewCategory.adapter = categoryAdapter
         binding.recyclerViewBanner.adapter = bannerAdapter
 
-        productAdapter.setData(list)
+        //productAdapter.setData(list)
         categoryAdapter.setData(categoryList)
         bannerAdapter.setData(bannerList)
 
@@ -135,6 +133,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             viewModel.getAllProduct()
             binding.swipeHome.isRefreshing = true
         }
+
+
 
 
     }

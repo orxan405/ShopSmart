@@ -49,6 +49,7 @@ android {
 
 dependencies {
     val room_version = "2.6.1"
+    val lottieVersion = "3.4.0"
 
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -84,6 +85,10 @@ dependencies {
     implementation("androidx.room:room-paging:$room_version")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    implementation("com.airbnb.android:lottie:$lottieVersion")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 }
 
 
