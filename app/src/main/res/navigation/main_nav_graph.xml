@@ -43,4 +43,9 @@
         android:name="com.nexis.shopsmart.ui.add_product.AddProductFragment"
         android:label="Yeni məhsul əlavə et"
         tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nexis.shopsmart.ui.login.LoginFragment"
+        android:label="Daxil ol"
+        tools:layout="@layout/fragment_login" />
 </navigation>

@@ -93,14 +93,25 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 //                bundleOf(SELECTED_ITEM to productModel), getNavOptions()
 //            )
 //        }
-        productAdapter = ProductAdapter { productModel ->
+        productAdapter = ProductAdapter(
+            onClickItem = { productModel ->
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_productDetailsFragment,
+                    bundleOf(SELECTED_ITEM to productModel),
+                    getNavOptions()
+                )
+            },
+            onMakeFavorite = { productModel ->
+                viewModel.makeItemFavorite(productModel)
+            },
+            onAddtoCardClicked = {
 
-            findNavController().navigate(
-                R.id.action_homeFragment_to_productDetailsFragment,
-                bundleOf(SELECTED_ITEM to productModel),
-                getNavOptions()
-            )
-        }
+            }
+
+        )
+
+
+
         categoryAdapter = CategoryAdapter { selectedCategory ->
 
         }
@@ -133,8 +144,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             viewModel.getAllProduct()
             binding.swipeHome.isRefreshing = true
         }
-
-
 
 
     }

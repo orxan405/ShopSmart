@@ -26,4 +26,8 @@ class HomeViewModel @Inject constructor(private val homeRepository: HomeReposito
         }
     }
 
+    fun makeItemFavorite(productModel: ProductModel) = viewModelScope.launch {
+        homeRepository.makeItemFavorite(productModel)
+    }
+
 }

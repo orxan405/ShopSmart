@@ -54,4 +54,8 @@ class HomeRepository @Inject constructor(
         productDao.insertProduct(productModel)
     }
 
+    suspend fun makeItemFavorite(productModel: ProductModel) = withContext(Dispatchers.IO) {
+        productDao.makeItemFavorite(productModel.id, productModel.isFavorite)
+    }
+
 }

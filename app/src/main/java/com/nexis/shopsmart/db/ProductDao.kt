@@ -8,9 +8,12 @@ import com.nexis.shopsmart.model.local.ProductModel
 
 @Dao
 interface ProductDao {
-    @Insert(onConflict = OnConflictStrategy.ABORT)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertProduct(productModel: ProductModel)
 
     @Query("SELECT * FROM product_table")
     fun getAllProducts(): List<ProductModel>
+
+    @Query("UPDATE product_table SET isFavorite=:favorite WHERE id=:id")
+    fun makeItemFavorite(id: Int?, favorite: Boolean)
 }

@@ -34,6 +34,6 @@ data class ProductModel(
     val productDescription: String? = null,
 
     @ColumnInfo(name = "isFavorite")
-    val isFavorite: Boolean = false
+    var isFavorite: Boolean = false
 
 ) : Parcelable
