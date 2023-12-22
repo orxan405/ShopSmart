@@ -40,6 +40,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 
     kapt{
@@ -89,6 +90,12 @@ dependencies {
     implementation("com.airbnb.android:lottie:$lottieVersion")
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    //GSON
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }
 
 

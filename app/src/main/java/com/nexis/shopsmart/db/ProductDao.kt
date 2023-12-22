@@ -14,6 +14,9 @@ interface ProductDao {
     @Query("SELECT * FROM product_table")
     fun getAllProducts(): List<ProductModel>
 
+    @Query("SELECT * FROM product_table WHERE isFavorite = 1")
+    fun getAllFavoriteProducts() : List<ProductModel>
+
     @Query("UPDATE product_table SET isFavorite=:favorite WHERE id=:id")
     fun makeItemFavorite(id: Int?, favorite: Boolean)
 }

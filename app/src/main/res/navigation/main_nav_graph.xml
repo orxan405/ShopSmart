@@ -24,7 +24,11 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.nexis.shopsmart.ui.profile.ProfileFragment"
-        android:label="Profile Fragment" />
+        android:label="Profile Fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wishlistFragment"
         android:name="com.nexis.shopsmart.ui.wishlist.WishlistFragment"
